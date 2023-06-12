@@ -5,7 +5,7 @@ public class CarSuv extends Car{
     public CarSuv(String name, Double HP, Integer ports) {
         super(name, HP, ports, 0, false);
     }
-    
+
     @Override
     public void speedUp() {
         if(this.isOn()) {
