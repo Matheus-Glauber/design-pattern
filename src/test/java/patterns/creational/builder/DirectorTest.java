@@ -1,5 +1,6 @@
 package patterns.creational.builder;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import patterns.creational.builder.entities.Dwelling;
@@ -8,10 +9,7 @@ import patterns.creational.builder.enums.RoomType;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class DirectorTest {
-
     private Director director;
     private DwellingBuilder builder;
 
@@ -27,13 +25,13 @@ class DirectorTest {
 
         Dwelling response = builder.getResult();
 
-        assertNotNull(response);
-        assertEquals(DwellingType.HOUSE, response.getDwellingType());
-        assertEquals(mockRoomsHouse(), response.getRoomTypes());
-        assertEquals(5, response.getRoomsQty());
-        assertEquals(5, response.getWindowsQty());
-        assertEquals(false, response.isDoTheyHaveAPool());
-        assertEquals(false, response.isDoTheyHaveARecreationArea());
+        Assertions.assertNotNull(response);
+        Assertions.assertEquals(DwellingType.HOUSE, response.getDwellingType());
+        Assertions.assertEquals(mockRoomsHouse(), response.getRoomTypes());
+        Assertions.assertEquals(5, response.getRoomsQty());
+        Assertions.assertEquals(5, response.getWindowsQty());
+        Assertions.assertEquals(false, response.isDoTheyHaveAPool());
+        Assertions.assertEquals(false, response.isDoTheyHaveARecreationArea());
     }
 
     @Test
@@ -42,13 +40,13 @@ class DirectorTest {
 
         Dwelling response = builder.getResult();
 
-        assertNotNull(response);
-        assertEquals(DwellingType.LOFT, response.getDwellingType());
-        assertEquals(mockRoomsLoft(), response.getRoomTypes());
-        assertEquals(4, response.getRoomsQty());
-        assertEquals(4, response.getWindowsQty());
-        assertEquals(false, response.isDoTheyHaveAPool());
-        assertEquals(false, response.isDoTheyHaveARecreationArea());
+        Assertions.assertNotNull(response);
+        Assertions.assertEquals(DwellingType.LOFT, response.getDwellingType());
+        Assertions.assertEquals(mockRoomsLoft(), response.getRoomTypes());
+        Assertions.assertEquals(4, response.getRoomsQty());
+        Assertions.assertEquals(4, response.getWindowsQty());
+        Assertions.assertEquals(false, response.isDoTheyHaveAPool());
+        Assertions.assertEquals(false, response.isDoTheyHaveARecreationArea());
     }
 
     @Test
@@ -57,13 +55,13 @@ class DirectorTest {
 
         Dwelling response = builder.getResult();
 
-        assertNotNull(response);
-        assertEquals(DwellingType.KITNET, response.getDwellingType());
-        assertEquals(mockRoomsKitnet(), response.getRoomTypes());
-        assertEquals(3, response.getRoomsQty());
-        assertEquals(2, response.getWindowsQty());
-        assertEquals(false, response.isDoTheyHaveAPool());
-        assertEquals(false, response.isDoTheyHaveARecreationArea());
+        Assertions.assertNotNull(response);
+        Assertions.assertEquals(DwellingType.KITNET, response.getDwellingType());
+        Assertions.assertEquals(mockRoomsKitnet(), response.getRoomTypes());
+        Assertions.assertEquals(3, response.getRoomsQty());
+        Assertions.assertEquals(2, response.getWindowsQty());
+        Assertions.assertEquals(false, response.isDoTheyHaveAPool());
+        Assertions.assertEquals(false, response.isDoTheyHaveARecreationArea());
     }
 
     @Test
@@ -72,13 +70,13 @@ class DirectorTest {
 
         Dwelling response = builder.getResult();
 
-        assertNotNull(response);
-        assertEquals(DwellingType.MANSION, response.getDwellingType());
-        assertEquals(mockRoomsMansion(), response.getRoomTypes());
-        assertEquals(10, response.getRoomsQty());
-        assertEquals(10, response.getWindowsQty());
-        assertEquals(true, response.isDoTheyHaveAPool());
-        assertEquals(true, response.isDoTheyHaveARecreationArea());
+        Assertions.assertNotNull(response);
+        Assertions.assertEquals(DwellingType.MANSION, response.getDwellingType());
+        Assertions.assertEquals(mockRoomsMansion(), response.getRoomTypes());
+        Assertions.assertEquals(10, response.getRoomsQty());
+        Assertions.assertEquals(10, response.getWindowsQty());
+        Assertions.assertEquals(true, response.isDoTheyHaveAPool());
+        Assertions.assertEquals(true, response.isDoTheyHaveARecreationArea());
     }
 
     private static List<RoomType> mockRoomsHouse() {
