@@ -30,8 +30,8 @@ class DirectorTest {
         Assertions.assertEquals(mockRoomsHouse(), response.getRoomTypes());
         Assertions.assertEquals(5, response.getRoomsQty());
         Assertions.assertEquals(5, response.getWindowsQty());
-        Assertions.assertEquals(false, response.isDoTheyHaveAPool());
-        Assertions.assertEquals(false, response.isDoTheyHaveARecreationArea());
+        Assertions.assertFalse(response.isDoTheyHaveAPool());
+        Assertions.assertFalse(response.isDoTheyHaveARecreationArea());
     }
 
     @Test
@@ -45,8 +45,8 @@ class DirectorTest {
         Assertions.assertEquals(mockRoomsLoft(), response.getRoomTypes());
         Assertions.assertEquals(4, response.getRoomsQty());
         Assertions.assertEquals(4, response.getWindowsQty());
-        Assertions.assertEquals(false, response.isDoTheyHaveAPool());
-        Assertions.assertEquals(false, response.isDoTheyHaveARecreationArea());
+        Assertions.assertFalse(response.isDoTheyHaveAPool());
+        Assertions.assertFalse(response.isDoTheyHaveARecreationArea());
     }
 
     @Test
@@ -60,8 +60,8 @@ class DirectorTest {
         Assertions.assertEquals(mockRoomsKitnet(), response.getRoomTypes());
         Assertions.assertEquals(3, response.getRoomsQty());
         Assertions.assertEquals(2, response.getWindowsQty());
-        Assertions.assertEquals(false, response.isDoTheyHaveAPool());
-        Assertions.assertEquals(false, response.isDoTheyHaveARecreationArea());
+        Assertions.assertFalse(response.isDoTheyHaveAPool());
+        Assertions.assertFalse(response.isDoTheyHaveARecreationArea());
     }
 
     @Test
@@ -75,8 +75,8 @@ class DirectorTest {
         Assertions.assertEquals(mockRoomsMansion(), response.getRoomTypes());
         Assertions.assertEquals(10, response.getRoomsQty());
         Assertions.assertEquals(10, response.getWindowsQty());
-        Assertions.assertEquals(true, response.isDoTheyHaveAPool());
-        Assertions.assertEquals(true, response.isDoTheyHaveARecreationArea());
+        Assertions.assertTrue(response.isDoTheyHaveAPool());
+        Assertions.assertTrue(response.isDoTheyHaveARecreationArea());
     }
 
     private static List<RoomType> mockRoomsHouse() {
